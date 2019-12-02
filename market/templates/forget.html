@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORGET PASSWORD</title>
+</head>
+<body>
+	<form action="{% url 'forget_url' %}" method="POST">
+		{% csrf_token %}
+		<div class="wrap-input100 validate-input m-b-20" data-validate="Enter name">
+			<input class="input100" type="text" name="name" placeholder="name">
+			<span class="focus-input100"></span>
+		</div>
+		<label for="job">QUESTION:</label>
+        <select id="job" name="question">
+            <option value="book">Which is your favourite book</option>
+            <option value="nickname">What is your nickname</option>
+        </select>   
+        <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter answer">
+			<input type="text" name="answer" class="lock" placeholder="answer" required="">
+		</div> 
+		<div class="container-login100-form-btn">
+			<button class="login100-form-btn">
+				SAVE
+			</button>
+		</div>
+	</form>	
+
+</body>
+</html>
